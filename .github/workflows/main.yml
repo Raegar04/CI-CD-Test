@@ -1,0 +1,17 @@
+name: Copy-to-specificaions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  copy_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Copy file to specifications
+        run: cp CI-CD-Test/test.txt specifications/
