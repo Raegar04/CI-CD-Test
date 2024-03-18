@@ -32,4 +32,4 @@ jobs:
           git push
           uses: ad-m/github-push-action@master
           with:
-            github_token: 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
+            github_token: ${{ secrets.CI_ACCESS_TOKEN }}
