@@ -30,3 +30,6 @@ jobs:
       - name: Pushing to main
         run: |
           git push
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.CI_Access_Token }}
