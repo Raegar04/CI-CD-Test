@@ -15,6 +15,7 @@ namespace TestProject1
             var result = controller.Get();
 
             Assert.NotNull(result);
+
         }
     }
 }
