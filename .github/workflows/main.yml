@@ -13,5 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: List files in solution folder
+        run: ls -l CI-CD-Test
+
+      - name: List files in specifications folder before copy
+        run: ls -l Specifications
+
       - name: Copy file to specifications
         run: cp CI-CD-Test/test.txt Specifications
+
+      - name: List files in specifications folder after copy
+        run: ls -l Specifications
