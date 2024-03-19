@@ -17,6 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Remove existing file (if exists)
+        run: rm -f Specifications/openapi.yml
+
       - name: Copy file to specifications
         run: cp api/ChattO/API/openapi.yml Specifications/
 
