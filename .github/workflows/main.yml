@@ -17,9 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Remove existing file (if exists)
-        run: rm -f Specifications/openapi.yml
-
       - name: Copy file to specifications
         run: cp api/ChattO/API/openapi.yml Specifications/
 
@@ -31,7 +28,7 @@ jobs:
       - name: Adding new file and performing commit
         run: |
           git add Specifications/openapi.yml
-          git commit -m "[skip ci] Copy file to specifications folder"
+          git commit -m "[skip ci] Copy file to specifications folder" --allow-empty
 
       - name: Pushing to main
         uses: ad-m/github-push-action@master
