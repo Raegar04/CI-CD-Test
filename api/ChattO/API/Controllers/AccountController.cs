@@ -14,7 +14,7 @@ public class AccountController : BaseController
         _userService = userService;
     }
 
-    [HttpPost("Login")]
+    [HttpPost("Login")];
     [ProducesResponseType<string>(StatusCodes.Status200OK)]
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
