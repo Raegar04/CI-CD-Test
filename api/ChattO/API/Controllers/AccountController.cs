@@ -8,7 +8,13 @@ namespace API.Controllers;
 public class AccountController : BaseController
 {
     private readonly IUserService _userService;
-
+    
+  //<Target Name = "OpenAPI" AfterTargets="Build" Condition="$(Configuration)=='Debug'">
+  //  <PropertyGroup>
+  //    <AssemblyFullPath>$([System.IO.Path]::GetFullPath($(MSBuildProjectDirectory)\$(OutDir)$(TargetFileName)))</AssemblyFullPath>
+  //  </PropertyGroup>
+  //  <Exec Command = "swagger tofile --output openapi.yml --yaml $(AssemblyFullPath) v1" WorkingDirectory="$(SolutionDir)" />
+  //</Target>
     public AccountController(IUserService userService)
     {
         _userService = userService;
