@@ -22,7 +22,7 @@ public class AccountController : BaseController
     public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest) 
     {
         var loginResult = await _userService.AuthenticateUserAsync(loginRequest.Username, loginRequest.Password);
-
+        var a = 1;
         return HandleResult(loginResult);
     }
 
