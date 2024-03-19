@@ -22,10 +22,10 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: CI-CD-Test
+      working-directory: api/Chatto
     - name: Build
       run: dotnet build --no-restore
-      working-directory: CI-CD-Test
+      working-directory: api/Chatto
     - name: Test
       run: dotnet test --no-restore
-      working-directory: CI-CD-Test
+      working-directory: api/Chatto
