@@ -57,6 +57,8 @@ paths:
             text/json:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
+        '201':
+          description: Created
   /api/Account/Logout:
     get:
       tags:
