@@ -17,6 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Ensure directory exists
+        run: mkdir -p specifications
+
       - name: Copy file to specifications
         run: cp api/ChattO/API/openapi.yml Specifications/
 
