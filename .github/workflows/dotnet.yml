@@ -28,7 +28,7 @@ jobs:
       working-directory: api/ChattO
     - name: Build
       run: dotnet build --no-restore
-      working-directory: api/ChattO/API
+      working-directory: api/ChattO
     - name: Test
       run: dotnet test --no-restore
       working-directory: api/ChattO
