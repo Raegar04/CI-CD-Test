@@ -30,7 +30,7 @@ jobs:
 
       - name: Adding new file and performing commit
         run: |
-          git add Specifications/openapi.yml
+          git add specifications/openapi.yml
           git commit -m "[skip ci] Copy file to specifications folder" --allow-empty
 
       - name: Pushing to main
