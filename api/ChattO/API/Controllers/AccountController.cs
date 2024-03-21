@@ -19,11 +19,12 @@ public class AccountController : BaseController
     [ProducesResponseType<string>(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest) 
     {
         var loginResult = await _userService.AuthenticateUserAsync(loginRequest.Username, loginRequest.Password);
         var a = 1;
-        var t = 2;
+        var t = 3;
         return HandleResult(loginResult);
     }
 
